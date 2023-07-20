@@ -2,10 +2,10 @@ const express=require('express');
 const path=require('path');
 const ejs=require('ejs');
 const moongose=require('mongoose');
-moongose.set('useFindAndModify', false);
+// moongose.set('useFindAndModify', false);
 const app=express();
-const url="mongodb+srv://cke_bakery:test@cluster0.au2sh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-moongose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+const url="mongodb+srv://mathurharsh1:Mathurharsh1@cluster0.0jdvtts.mongodb.net/?retryWrites=true&w=majority";
+moongose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true,useFindAndModify:false}).then(()=>{
 console.log("database has been connected") ;   
 }).catch(()=>{
     console.log("can not connect to database");
